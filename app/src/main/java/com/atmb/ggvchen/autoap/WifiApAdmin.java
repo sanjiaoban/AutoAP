@@ -24,6 +24,12 @@ public class WifiApAdmin {
     }
     private String mSSID = "";
     private String mPasswd = "";
+    public boolean getWifiStatus(){
+        return mWifiManager.isWifiEnabled();
+    }
+    public void setWifiStatus(boolean isWifiEnabled){
+        mWifiManager.setWifiEnabled(isWifiEnabled);
+    }
     public void startWifiAp(String ssid, String passwd) {
         mSSID = ssid;
         mPasswd = passwd;
